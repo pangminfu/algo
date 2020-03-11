@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/pangminfu/algo/search"
-	"gopkg.in/go-playground/assert.v1"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestBinaryTree(t *testing.T) {

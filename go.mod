@@ -2,4 +2,4 @@ module github.com/pangminfu/algo
 
 go 1.13
 
-require gopkg.in/go-playground/assert.v1 v1.2.1
+require github.com/stretchr/testify v1.5.1
