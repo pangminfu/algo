@@ -1,8 +1,22 @@
 package search
 
-func BinaryTree(arr []int, target int) (int, error) {
-	// left := arr[0]
-	// right := arr[len(arr)-1]
+import "errors"
 
-	return -1, nil
+func BinaryTree(arr []int, target int) (int, error) {
+	left := 0
+	right := len(arr) - 1
+
+	for left <= right {
+		mid := (left + right) / 2
+
+		if arr[mid] > target {
+			right = mid - 1
+		} else if arr[mid] < target {
+			left = mid + 1
+		} else {
+			return mid, nil
+		}
+	}
+
+	return -1, errors.New("not found")
 }
